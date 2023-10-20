@@ -1,0 +1,34 @@
+{
+  "coffees": [
+    {
+      "id": 1,
+      "title": "Cappuchino",
+      "price": 3.5,
+      "pic": "./images/Cappuccino.avif"
+    },
+    {
+      "id": 2,
+      "title": "Latte",
+      "price": 3.5,
+      "pic": "./images/Latte.avif"
+    },
+    {
+      "id": 3,
+      "title": "Espresso",
+      "price": 3.5,
+      "pic": "./images/Espresso.avif"
+    },
+    {
+      "id": 4,
+      "title": "Mocha",
+      "price": 3.5,
+      "pic": "./images/Mocha.avif"
+    },
+    {
+      "id": 5,
+      "title": "Americano",
+      "price": 3.5,
+      "pic": "./images/Americano.avif"
+    }
+  ]
+}
