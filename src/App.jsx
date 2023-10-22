@@ -17,6 +17,10 @@ function App() {
     setCoffees(updatedCoffees);
   };
 
+  const handleIncrement4 = coffee => {
+    setCoffees(prevCoffees => prevCoffees.map(c => (c === coffee ? { ...c, count: c.count + 1 } : c)));
+  };
+
   const handleDecrement = coffee => {
     if (coffee.count) {
       const updatedCoffees = coffees.map(c => (c === coffee ? { ...c, count: c.count - 1 } : c));
@@ -40,8 +44,21 @@ function App() {
     setCoffees(updatedCoffees);
   };
 
+  const handleIncrement3 = coffee => {
+    setCoffees(prevCoffees => {
+      const targetCoffeeIndex = prevCoffees.indexOf(coffee);
+
+      const editedTargetCoffee = { ...coffee, count: coffee.count + 1 };
+
+      const updatedCoffees = [...prevCoffees];
+      updatedCoffees[targetCoffeeIndex] = editedTargetCoffee;
+
+      return updatedCoffees;
+    });
+  };
+
   const handleDecrement2 = coffee => {
-    if (coffee.count) {
+    if (coffee.count > 0) {
       const targetCoffeeIndex = coffees.indexOf(coffee);
 
       const editedTargetCoffee = { ...coffee, count: coffee.count - 1 };
